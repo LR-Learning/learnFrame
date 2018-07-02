@@ -16,8 +16,13 @@
 
     <!--Spring set方法注入-->
     <bean id="Car2" class="com.spring.example.demo2.Car2">
-
         <property name="name" value="奔驰"/>
         <property name="price" value="580000.0"/>
+    </bean>
+
+    <!--Spring set方法对象属性设置-->
+    <bean id="employee" class="com.spring.example.demo2.Employee">
+        <property name="name" value="奔驰"/>
+        <property name="car2" ref="Car2"/>
     </bean>
 </beans>
