@@ -4,5 +4,20 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 
 
-    <bean id="IDao" class="com.spring.example.DaoImpl"></bean>
+    <bean id="IDao" class="com.spring.example.demo1.DaoImpl">
+        <property name="name" value="lr"></property>
+    </bean>
+
+    <!--Spring 构造方法注入-->
+    <bean id="Car" class="com.spring.example.demo2.Car">
+        <constructor-arg name="name" value="宝马"></constructor-arg>
+        <constructor-arg name="price" value="800000.00"></constructor-arg>
+    </bean>
+
+    <!--Spring set方法注入-->
+    <bean id="Car2" class="com.spring.example.demo2.Car2">
+
+        <property name="name" value="奔驰"/>
+        <property name="price" value="580000.0"/>
+    </bean>
 </beans>

@@ -1,12 +1,14 @@
-package com.spring.example;
+package com.spring.example.demo1;
 
 
+import com.spring.example.demo1.DaoImpl;
+import com.spring.example.demo1.IDao;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class SpringTest {
-    String name = "Spring";
+public class SpringTest1 {
+    String name ;
     // 传统方式
     @Test
     public void test1(){
@@ -22,7 +24,7 @@ public class SpringTest {
         // 创建Spring工厂
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:applicationContext.xml");
         IDao iDao = (IDao) applicationContext.getBean("IDao");
-        String s = iDao.sayHello("abc");
+        String s = iDao.sayHello(name);
         System.out.println(s);
     }
 }

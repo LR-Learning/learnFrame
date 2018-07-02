@@ -1,8 +1,8 @@
-package com.spring.example;
+package com.spring.example.demo1;
 
 import java.util.Calendar;
 
-public class DaoImpl implements IDao{
+public class DaoImpl implements IDao {
 
     private String name;
 
