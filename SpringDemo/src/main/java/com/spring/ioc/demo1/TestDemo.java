@@ -28,4 +28,11 @@ public class TestDemo {
         userDao.save();
     }
 
+    @Test
+    public void test3(){
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath*:applicationContext.xml");
+        UserService userService = (UserService) applicationContext.getBean("userService");
+        userService.save();
+    }
+
 }
