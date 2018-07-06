@@ -1,28 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx" xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+     http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+     http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+     http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+     http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
+    <!-- Spring 的IOC注解入门-->
+    <!-- 配置扫描-->
+    <context:component-scan base-package="com.spring.ioc"></context:component-scan>
 
-    <bean id="IDao" class="com.spring.example.demo1.DaoImpl">
-        <property name="name" value="lr"></property>
-    </bean>
+    <!--<bean id="IDao" class="com.spring.example.demo1.DaoImpl">-->
+        <!--<property name="name" value="lr"></property>-->
+    <!--</bean>-->
 
     <!--Spring 构造方法注入-->
-    <bean id="Car" class="com.spring.example.demo2.Car">
-        <constructor-arg name="name" value="宝马"></constructor-arg>
-        <constructor-arg name="price" value="800000.00"></constructor-arg>
-    </bean>
+    <!--<bean id="Car" class="com.spring.example.demo2.Car">-->
+        <!--<constructor-arg name="name" value="宝马"></constructor-arg>-->
+        <!--<constructor-arg name="price" value="800000.00"></constructor-arg>-->
+    <!--</bean>-->
 
     <!--Spring set方法注入-->
-    <bean id="Car2" class="com.spring.example.demo2.Car2">
-        <property name="name" value="奔驰"/>
-        <property name="price" value="580000.0"/>
-    </bean>
+    <!--<bean id="Car2" class="com.spring.example.demo2.Car2">-->
+        <!--<property name="name" value="奔驰"/>-->
+        <!--<property name="price" value="580000.0"/>-->
+    <!--</bean>-->
 
+    <!-- 改成p名称命名空间的方式-->
+    <!--<bean id="Car2" class="com.spring.example.demo2.Car2" p:name="SUV" p:price="40000.0"></bean>-->
     <!--Spring set方法对象属性设置-->
-    <bean id="employee" class="com.spring.example.demo2.Employee">
-        <property name="name" value="奔驰"/>
-        <property name="car2" ref="Car2"/>
-    </bean>
+    <!--<bean id="employee" class="com.spring.example.demo2.Employee">-->
+        <!--<property name="name" value="奔驰"/>-->
+        <!--<property name="car2" ref="Car2"/>-->
+    <!--</bean>-->
+    <!-- 改成p名称命名空间的方式   对象属性-->
+    <!--<bean id="employee" class="com.spring.example.demo2.Employee" p:name="张三" p:car2-ref="Car2"></bean>-->
+
+    <!-- spEL的属性注入-->
+    <!--<bean id="Car2" class="com.spring.example.demo2.Car2">-->
+        <!--<property name="name" value="#{'大众'}"/>-->
+        <!--<property name="price" value="#{3500.0}"/>-->
+    <!--</bean>-->
+
+    <!--<bean id="employee" class="com.spring.example.demo2.Employee">-->
+        <!--<property name="name" value="#{'meiko'}"/>-->
+        <!--<property name="car2" value="#{Car2}"/>-->
+    <!--</bean>-->
+
+
+    <!-- String集合的注入-->
+    <!-- 注入数组类型-->
+    <!--<bean id="collectionBean" class="com.spring.example.demo3.CollectionBean">-->
+        <!--<property name="arrs">-->
+            <!--<list>-->
+                <!--<value>A</value>-->
+                <!--<value>B</value>-->
+                <!--<value>C</value>-->
+                <!--<value>D</value>-->
+            <!--</list>-->
+        <!--</property>-->
+        <!--&lt;!&ndash; 注入List类型&ndash;&gt;-->
+        <!--<property name="list">-->
+            <!--<list>-->
+                <!--<value>a</value>-->
+                <!--<value>b</value>-->
+                <!--<value>c</value>-->
+                <!--<value>d</value>-->
+            <!--</list>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+
 </beans>
