@@ -11,8 +11,31 @@
 
     <!-- Spring 的IOC注解入门-->
     <!-- 配置扫描-->
-    <context:component-scan base-package="com.spring.ioc"></context:component-scan>
+    <!--<context:component-scan base-package="com.spring"></context:component-scan>-->
 
+    <!--用于激活那些已经在spring容器里注册过的bean-->
+    <!--<context:annotation-config/>-->
+
+    <!-- 配置目标对象 被增强的对象-->
+    <bean id="productDao" class="com.spring.aop.demo1.ProductDaoImpl"/>
+    <!-- 把切面类 交给Spring去管理-->
+    <bean id="myAspect" class="com.spring.aop.demo1.MyAspectXML"/>
+    <!-- 通过 aop的配置完成对目标类产生代理-->
+    <aop:config>
+        <aop:pointcut  expression="execution(* com.spring.aop.demo1.*.*(..))" id="pointcut1"/>
+        <!-- 配置切面-->
+        <aop:aspect ref="myAspect">
+            <aop:before method="checkPri" pointcut-ref="pointcut1"/>
+        </aop:aspect>
+    </aop:config>
+
+    <!--在配置文件中开启注解AOP的开发-->
+    <aop:aspectj-autoproxy/>
+
+    <bean id="orderDao" class="com.spring.aop.demo2.OrderDao"/>
+    <bean id="myAspect1" class="com.spring.aop.demo2.MyAspectAnno">
+
+    </bean>
     <!--<bean id="IDao" class="com.spring.example.demo1.DaoImpl">-->
         <!--<property name="name" value="lr"></property>-->
     <!--</bean>-->

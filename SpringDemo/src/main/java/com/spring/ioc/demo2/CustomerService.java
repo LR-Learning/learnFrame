@@ -16,7 +16,7 @@ import javax.annotation.PreDestroy;
 @Scope
 public class CustomerService {
 
-    @PostConstruct  // 相当于init-method
+//    @PostConstruct  // 相当于init-method
     public void init(){
         System.out.println(" CustomerService被初始化了。。。。。");
     }
@@ -24,7 +24,7 @@ public class CustomerService {
     public void save(){
         System.out.println(" CustomerService被执行了。。。。。");
     }
-    @PreDestroy  // 相当于destory-method
+//    @PreDestroy  // 相当于destory-method
     public void destory(){
         System.out.println(" CustomerService被销毁了。。。。。");
     }
