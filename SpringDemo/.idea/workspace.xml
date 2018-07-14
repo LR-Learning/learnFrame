@@ -16,7 +16,7 @@
       <file leaf-file-name="applicationContext.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="491">
+            <state relative-caret-position="523">
               <caret line="99" selection-start-line="99" selection-end-line="99" selection-end-column="8" />
             </state>
           </provider>
@@ -267,8 +267,8 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -498,6 +498,7 @@
       <workItem from="1530967732715" duration="599000" />
       <workItem from="1531015764805" duration="1030000" />
       <workItem from="1531019914622" duration="1225000" />
+      <workItem from="1531533617472" duration="604000" />
     </task>
     <servers />
   </component>
@@ -534,7 +535,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39451000" />
+    <option name="totallyTimeSpent" value="40055000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -563,7 +564,7 @@
       <window_info anchor="bottom" id="Version Control" order="14" show_stripe_button="false" />
       <window_info anchor="bottom" id="Spring" order="14" />
       <window_info anchor="bottom" id="Terminal" order="14" weight="0.3298969" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2705803" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27530363" />
       <window_info id="Web" order="5" side_tool="true" />
       <window_info id="JRebel" order="8" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="9" />
@@ -879,7 +880,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
+        <state relative-caret-position="523">
           <caret line="99" selection-start-line="99" selection-end-line="99" selection-end-column="8" />
         </state>
       </provider>
